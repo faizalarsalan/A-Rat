@@ -1,0 +1,79 @@
+body{
+    background-image: url('Airlines.webp');
+    margin:0px;
+}
+label #btn{
+  top: 5px;
+  left: 15px;
+  font-size: 25px;
+  color: white;
+  padding: 4px 8px;
+  transition:all .5s
+}
+
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position:absolute;
+  cursor: pointer;
+  background: black;
+  border-radius: 3px;
+}
+label #cancel{
+  z-index:1111;
+  left:-185px;
+  top:5px;
+  font-size: 25px;
+  color:aliceblue;
+  padding: 2px 5px;
+  transition: all .5s;
+}
+.sidebar{
+background-color: rgb(25, 25, 82);
+width:180px;
+height:100%;
+color:#ffffff;
+margin:0 0 0 -260px;
+transition:all .5s ease;
+}
+.sidebar h3{
+ background-color: rgb(31, 31, 101);
+ text-align: center;
+ line-height: 70px;
+ border-bottom:3px solid black;
+}
+.sidebar ul{
+    list-style: none;
+    margin:0 0 0 -35px;
+}
+.sidebar ul a{ 
+    text-decoration: none;
+    line-height: 65px;
+    display:block;
+    border-style: border-box;
+    color: aliceblue;
+    transition:0.3s;
+    border-bottom: 2px solid rgb(27, 27, 27);
+    border-left: 3px solid transparent;
+}
+
+
+.sidebar ul a:hover{
+    padding-left: 35px;
+    color:cyan;
+    border-left-color: cyan;
+}
+#check:checked ~ .sidebar{
+  
+  margin:0 0 0 0;
+}
+
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity:0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+ left:185px
+}

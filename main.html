@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <style>
+        body{
+            background-image: url('airplane1.jpg');
+            background-size: 1000px 500px;
+        }
+ 
+        .frame{
+            padding:5px 0 0 0;
+            background-color:rgb(111, 239, 239, .5);
+            margin:30px 0 0 150px;
+            height:350px;
+            width:550px;
+            border-radius: 10px;
+        }
+        .dep{
+            margin-left:25px;
+           
+        }
+        .depar{
+            margin-left:25px;
+            margin-top:-5px;
+            border-radius: 20px;
+            height:35px;
+            width:200px;
+        }
+        .ariv{
+            
+            margin-left:250px;
+            margin-top: -90px;
+        }
+        .arri{
+            margin-left:250px;
+           margin-top: -5px;
+            border-radius: 20px;
+            height:35px;
+            width:200px;
+        }
+        .dep_date{
+            margin-left: 25px;
+        }
+        .ret_date{
+            margin-left:250px;
+            margin-top:-88px;
+        }
+        .adult{
+            margin-left:25px;
+            margin-top:-5px;
+            border-radius: 20px;
+            height:35px;
+            width:100px;
+        }
+        .show{
+            font-weight: bold;
+            background-color: red;
+            border-radius:20px;
+            margin:0px 0 0 165px;
+            padding:10px 30px 10px 30px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .single{
+             margin-left:40px;
+             font-size: large;
+             padding:5 5 5 5;
+        }
+        .multi{
+             margin-left:0px;
+             font-size: large;
+             padding:5 5 5 5;
+        }
+        
+        li{
+            list-style: none;
+            display: inline-flex;
+            
+            background-color:white;
+            border-radius: 10px;
+        }
+        .single:hover,.multi:hover{
+            transition:.5s;
+            background-color:  rgb(77, 168, 248);
+            background-size: cover;
+        }
+        input[type="radio"]:checked{
+            background-color:  rgb(77, 168, 248);
+            border:2px solid rgb(77, 168, 248);
+        }
+        body{
+            margin: 0;
+            padding:0;
+        }
+        .head{
+            height:50px;
+            width: 100%;
+            background-color: rgb(49, 47, 47);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+
+        </div>
+    <div class="frame">
+        <ol class="trip">
+            <li class="single"><input type="radio">SINGLE TRIP</li>
+           <li class="multi"><input type="radio">MULTI TRIP</li>
+        </ol>
+        <h4 class="dep">FROM:</h4>
+            <h4><input type="text" class="depar"placeholder="Enter Departure place"></input>
+        </h4>
+        <h4 class="ariv">DESTINATION:</h4>
+           <h4><input type="text" class="arri" placeholder="Enter Arrival place"></input>
+        </h4>
+        <h4 class="dep">TRAVELLERS:</h4>
+            <h4><input type="number" class="depar"placeholder="Enter Date"></input>
+        </h4>
+        <h4 class="ariv">DATE:</h4>
+           <h4><input type="date" class="arri" placeholder="Enter Travellers"></input>
+        </h4>
+        
+        <h4><button class="show"><a href="flight.html">SHOW FLIGHTS</a></button>
+        </h4>
+    </div>
+    </body>
+</html>

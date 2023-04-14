@@ -1,0 +1,196 @@
+<html>
+    <head>
+    <style>
+        body{
+            background-image: url('background.webp');
+        }
+        .Frame{
+            border-radius: 10px;
+            margin:100 0 0 200;
+            width:60%;
+            height:620px;
+            background-color: rgb(235, 243, 250,0.7);
+            box-shadow: -10px 10px 10px rgb(91, 86, 86);
+        }
+        h2{
+            margin:0 0 0 200;
+            padding-top: 10;
+        } 
+        .schedule{
+            width:75%;
+            height:20px;
+            background-color: rgb(0, 170, 255);
+            border-radius: 10px;
+            margin:20 0 0 60px;
+            padding:5 5 5 5;
+            font-size: larger;
+            font-weight: bold;
+        }
+        .info{
+            margin:10 0 0 70;
+            border-radius: 10px;
+            height:200px;
+            width:75%;
+            transform: translate(-200%,0%) scale(1);
+            
+            background-color:  rgb(0, 170, 255,0.8);
+        }
+        h3{
+            padding-top: 15;
+            margin-left:20;
+        }
+        .time{
+            margin-left: 10px;
+            padding-top: 10px;
+            margin:-35 0 0 240;
+        }
+        ol{
+            list-style: none;
+            display:inline-flex;
+        }
+        
+        button{
+         padding:5 15 5 15;
+         background-color: none;
+         border-style: none;
+        }
+        button:hover{
+            background-color: rgb(0, 170, 255);
+            transition:0.5s;
+        }
+        .open-info{
+         transform: translate(0%,0%) scale(1);
+         transition:0.5s;
+        }
+        .ticket{
+            width:75%;
+            height:400px;
+            background-color:  rgb(0, 170, 255,0.8);
+            border-radius: 10px;
+            margin:-210 0 0 70;
+            transform:translate(-200%,0%) scale(1);
+           
+        }
+        .open-ticket{
+            transform:translate(0%,0%) scale(1);
+            transition:0.5s;
+        }
+        h4{
+            margin-left:10;
+            padding-top:10;
+        }
+        .submit{
+            margin-left:120px;
+        }
+        input{
+            width:60%;
+            border-radius: 10px;
+            padding:5 5 5 5;
+        }
+        .fare{
+            margin: -400 0 0 70;
+            border-radius: 10px;
+            width:75%;
+            height:120px;
+            background-color:  rgb(0, 170, 255,0.8);
+            transform:translate(-200%,0%) scale(1);
+        }
+        .cancel{
+            width:25%;
+            border-right:2px solid black;
+            margin: -20 0 0 5;
+        }
+        .cancel-info{
+            width:60%;
+            margin:-48 0 0 120;
+        }
+        .open-fare{
+            transform:translate(0%,0%) scale(1);
+            transition:0.5s; 
+        }
+    </style>
+    </head>
+    <body>
+        <div class="Frame">
+            <div class="link">
+                <ol>
+                    <li><button type="submit" onclick="openinfo()"> BAGGAGE INFO.</li>
+                    <li><button type="submit" onclick="openticket()">TICKET BOOKING</li>
+                    <li><button type="submit" onclick="openfare()">FARE CANCELLETION</li>
+                    
+                </ol>
+            </div>
+            <h2>BHARTIA AIRLINES</h2>
+        <div class="schedule">Delhi-Mumbai 
+            <h4 class="time">18:55 - 21:15
+            </h4>
+            </div>
+        
+        <div class="info" id="info">
+           
+         <h3>
+             BAGGAGE:
+             25kg
+             </h3>
+             <h3>
+                 HAND-BAGGAGE:8Kg
+             </h3>
+             <h3>
+                 MEALS:FREE
+         </h3>
+        </div>
+        <div class="ticket" id="ticket">
+        <h4>NAME:
+            <input type="text" placeholder="Enter name">
+            </h4>
+            <h4>AGE:
+                <input type="text" placeholder="Enter age">
+        </h4>
+        <h4>ADDRESS:
+            <input type="address" placeholder="Enter your address">
+        </h4>
+        <h4>PASSPORT ID:
+            <input type="e-mail" placeholder="Enter your passport Id">
+        </h4>
+        <h4>E-MAIL:
+            <input type="e-mail" placeholder="Enter your email">
+        </h4>
+        <h4>PHONE-NUMBER:
+            <input type="e-mail" placeholder="Enter your phone number">
+        </h4>
+        <h4>
+            <button class="submit" type="submit">SUBMIT
+        </h4>
+        </div>
+        <div class="fare" id="fare">
+        <h3>CANCELLATION DETAILS:</h3>
+        <h4 class="cancel">0-3(Days left for departure)</h4>
+        <h4 class="cancel-info">Lite Fare-Not Applicable Saver Fare-75% of fare will be returned.
+        </h4>
+        </div>
+        </div>
+        <script>
+            let element=document.getElementById("info");
+            function openinfo(){ 
+                
+              element.classList.add("open-info");
+              element2.classList.remove("open-fare");
+              element1.classList.remove("open-ticket");
+            }
+            let element1=document.getElementById("ticket");
+            function openticket(){
+                
+              element1.classList.add("open-ticket");
+              element.classList.remove("open-info");
+              element2.classList.remove("open-fare");
+            }
+            let element2=document.getElementById("fare");
+            function openfare(){
+                
+              element2.classList.add("open-fare");
+              element1.classList.remove("open-ticket");
+              element.classList.remove("open-info");
+            }
+             </script>
+    </body>
+</html>
